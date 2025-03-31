@@ -1,0 +1,194 @@
+:root {
+  font-family: 'VT323', 'Courier New', monospace;
+  color: #213547;
+  background-color: #f5f5f5;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 16px;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Vintage calculator styles */
+.vintage-calculator {
+  background-color: #e8d4b8;
+  border: 12px solid #8b5a2b;
+  border-radius: 15px;
+  box-shadow: 
+    inset 0 0 10px rgba(0, 0, 0, 0.3),
+    0 15px 30px rgba(0, 0, 0, 0.4),
+    0 5px 15px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  width: 340px;
+  max-width: 100%;
+  position: relative;
+  transform: perspective(1000px) rotateX(3deg);
+  background-image: 
+    linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%),
+    linear-gradient(225deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%),
+    linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%),
+    linear-gradient(315deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%);
+  background-position: 15px 0, 15px 0, 0 0, 0 0;
+  background-size: 30px 30px;
+  background-repeat: repeat;
+}
+
+.vintage-calculator::before {
+  content: "RETRO-CALC";
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #8b5a2b;
+  background-color: #e8d4b8;
+  padding: 0 8px;
+  border: 2px solid #8b5a2b;
+  border-radius: 5px;
+}
+
+.calculator-display {
+  background-color: #c4e0c4;
+  border: 6px inset #96a596;
+  border-radius: 5px;
+  font-family: 'VT323', 'Courier New', monospace;
+  height: 90px;
+  margin-bottom: 25px;
+  overflow: hidden;
+  padding: 10px;
+  text-align: right;
+  width: 100%;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.calculator-display::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.1) 1%,
+    transparent 2%,
+    transparent 98%,
+    rgba(255, 255, 255, 0.1) 99%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.calculator-button {
+  background-color: #f5f1e6;
+  border: 5px outset #d0c8b8;
+  border-radius: 8px;
+  color: #705030;
+  font-size: 1.5rem;
+  height: 60px;
+  transition: all 0.1s;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.calculator-button:active {
+  border-style: inset;
+  transform: translateY(3px);
+  box-shadow: 
+    0 2px 3px rgba(0, 0, 0, 0.1),
+    inset 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.calculator-button:hover {
+  background-color: #fff8ee;
+}
+
+.double-width {
+  grid-column: span 2;
+}
+
+.operator {
+  background-color: #f0b27a;
+  border-color: #d68910;
+  color: #7d4e00;
+}
+
+.operator:hover {
+  background-color: #f5c293;
+}
+
+.equals {
+  background-color: #5dade2;
+  border-color: #2e86c1;
+  color: #1a5276;
+}
+
+.equals:hover {
+  background-color: #85c1e9;
+}
+
+.history-chat {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 3px inset #96a596;
+  background-color: #c4e0c4;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.mode-toggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.mode-button {
+  background-color: #d8c8b0;
+  border: 3px outset #b8a890;
+  border-radius: 5px;
+  color: #705030;
+  flex: 1;
+  font-size: 0.75rem;
+  min-width: 50px;
+  padding: 5px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.mode-button.active {
+  background-color: #a8c8a8;
+  border-style: inset;
+  color: #3c5a3c;
+} 

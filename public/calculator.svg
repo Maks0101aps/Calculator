@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Calculator</title>
+    <g id="Calculator" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Background" fill="#5A5A5A" x="66" y="32" width="380" height="448" rx="20"></rect>
+        <rect id="Screen" fill="#D3DDCB" x="96" y="72" width="320" height="80" rx="8"></rect>
+        <rect id="Button-1" fill="#E8E8E8" x="96" y="172" width="70" height="70" rx="8"></rect>
+        <rect id="Button-2" fill="#E8E8E8" x="176" y="172" width="70" height="70" rx="8"></rect>
+        <rect id="Button-3" fill="#E8E8E8" x="256" y="172" width="70" height="70" rx="8"></rect>
+        <rect id="Button-plus" fill="#F0B27A" x="346" y="172" width="70" height="70" rx="8"></rect>
+        <rect id="Button-4" fill="#E8E8E8" x="96" y="252" width="70" height="70" rx="8"></rect>
+        <rect id="Button-5" fill="#E8E8E8" x="176" y="252" width="70" height="70" rx="8"></rect>
+        <rect id="Button-6" fill="#E8E8E8" x="256" y="252" width="70" height="70" rx="8"></rect>
+        <rect id="Button-minus" fill="#F0B27A" x="346" y="252" width="70" height="70" rx="8"></rect>
+        <rect id="Button-7" fill="#E8E8E8" x="96" y="332" width="70" height="70" rx="8"></rect>
+        <rect id="Button-8" fill="#E8E8E8" x="176" y="332" width="70" height="70" rx="8"></rect>
+        <rect id="Button-9" fill="#E8E8E8" x="256" y="332" width="70" height="70" rx="8"></rect>
+        <rect id="Button-multiply" fill="#F0B27A" x="346" y="332" width="70" height="70" rx="8"></rect>
+        <rect id="Button-clear" fill="#E8E8E8" x="96" y="412" width="70" height="70" rx="8"></rect>
+        <rect id="Button-0" fill="#E8E8E8" x="176" y="412" width="70" height="70" rx="8"></rect>
+        <rect id="Button-dot" fill="#E8E8E8" x="256" y="412" width="70" height="70" rx="8"></rect>
+        <rect id="Button-equals" fill="#5DADE2" x="346" y="412" width="70" height="70" rx="8"></rect>
+    </g>
+</svg> 

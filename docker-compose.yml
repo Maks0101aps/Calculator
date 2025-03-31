@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:5.0
+    container_name: calculator-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=example
+    networks:
+      - calculator-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: calculator-backend
+    ports:
+      - "8080:8080"
+    environment:
+      - MONGO_URI=mongodb://root:example@mongo:27017/?authSource=admin
+    depends_on:
+      - mongo
+    networks:
+      - calculator-network
+
+networks:
+  calculator-network:
+    driver: bridge
+
+volumes:
+  mongo-data: 
