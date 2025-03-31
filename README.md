@@ -1,7 +1,5 @@
 # Retro Calculator
 
-![Retro Calculator](public/calculator-screenshot.png)
-
 Vintage-style calculator application with modern capabilities built with Svelte, TypeScript, and Tauri.
 
 ## 📱 Preview
